@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Giggy's World",
+  "short_name": "Giggy's World",
   "icons": [
     {
       "src": "/giggy/images/web-app-manifest-192x192.png",
