@@ -13,11 +13,16 @@ header {
     padding: 32px;
 }
 
-header img {
+header .pfp {
     width: 300px;
     height: 300px;
-    border: 18px solid #ffffff50;
+    border: 18px solid #E5B1D5;
     border-radius: 50%;
+    background-image: url(/giggy/images/giggy.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 header h1 {
