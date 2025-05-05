@@ -45,8 +45,10 @@ header p {
 }
 
 main {
-    width: 800px;
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -55,41 +57,53 @@ h2 {
     margin: 0;    
 }
 
-.likes-row {
+.card-container {
     display: flex;
-    align-items: center;
-    gap: 8px; /* space between icon and text */
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center; /* Optional: centers cards when fewer per row */
+    max-width: 1200px;     /* Prevents cards from stretching too wide */
+    margin: 0 auto;        /* Centers the container horizontally */
   }
 
-.likes-row .material-symbols-outlined {
-    font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 1.5em;
-    font-size: 1.5em; /* optional, adjust size */
-    color: #E5B1D5;   /* optional, set your color */
-  }
-
-.dislikes-row {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* space between icon and text */
-  }
-
-.dislikes-row .material-symbols-outlined {
-    font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 1.5em;
-    font-size: 1.5em; /* optional, adjust size */
-    color: #E5B1D5;   /* optional, set your color */
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .card {
+    flex: 1 1 300px; /* Grow, shrink, and have a minimum width of 300px */
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .card-header .material-symbols-outlined {
+    font-size: 24px;
+    color: #e91e63;
+  }
+  
+  .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .card-list li {
+    padding-left: 1em;
+    position: relative;
+  }
+  
+  .card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e91e63;
+  }
