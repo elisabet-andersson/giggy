@@ -43,3 +43,53 @@ header p {
     margin: 0;
     color: #000000
 }
+
+main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48;
+    margin: 0;    
+}
+
+.likes-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+  }
+
+.likes-row .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 1.5em;
+    font-size: 1.5em; /* optional, adjust size */
+    color: #E5B1D5;   /* optional, set your color */
+  }
+
+.dislikes-row {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+  }
+
+.dislikes-row .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 1.5em;
+    font-size: 1.5em; /* optional, adjust size */
+    color: #E5B1D5;   /* optional, set your color */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
