@@ -1,40 +1,42 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color:#A80582;
+  background-color: #A80582;
 }
 
 /* Fonts */
 
 h1 {
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-    color: #ffbeed;
-    margin: 0 0;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  color: #ffbeed;
+  margin: 0 0;
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 2rem;
-    color: #ffffff;
-    margin: 0 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0 0;
 }
 
 h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin: 0 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0;
 }
 
-p, li {
+p,
+li {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -47,31 +49,31 @@ p, li {
 /* Header */
 
 header {
-    text-align: center;
-    background-color: #b53493;
-    padding: 32px;
+  text-align: center;
+  background-color: #b53493;
+  padding: 32px;
 }
 
 header .pfp {
-    width: 300px;
-    height: 300px;
-    border: 12px solid #ffbeed;
-    border-radius: 50%;
-    background-image: url(/giggy/images/giggy.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 12px solid #ffbeed;
+  border-radius: 50%;
+  background-image: url(/giggy/images/giggy.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
 }
 
 header p {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 32px;
-    margin: 0;
-    color: #FFE6F8
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 32px;
+  margin: 0;
+  color: #FFE6F8
 }
 
 /* Main */
@@ -87,53 +89,57 @@ main {
 }
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center; /* Optional: centers cards when fewer per row */
-    max-width: 1200px;     /* Prevents cards from stretching too wide */
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  /* Optional: centers cards when fewer per row */
+  max-width: 1200px;
+  /* Prevents cards from stretching too wide */
+}
 
-  .card {
-    flex: 1 1 300px; /* Grow, shrink, and have a minimum width of 300px */
-    box-sizing: border-box;
-    padding: 16px;
-    background-color: #d88dc240;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    justify-content: space-between;
-    }
-  
-  .card-header .material-symbols-outlined {
-    font-size: 1.5rem;
-    color: #ffbeec;
-    font-weight: 300; /* Thin */
-    }
+.card {
+  flex: 1 1 300px;
+  /* Grow, shrink, and have a minimum width of 300px */
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #d88dc240;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    }
-  
-  .card-list li {
-    padding-left: 1em;
-    position: relative;
-    }
-  
-  .card-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ffbeec;
-    }
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  justify-content: space-between;
+}
+
+.card-header .material-symbols-outlined {
+  font-size: 1.5rem;
+  color: #ffbeec;
+  font-weight: 300;
+  /* Thin */
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-list li {
+  padding-left: 1em;
+  position: relative;
+}
+
+.card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffbeec;
+}
