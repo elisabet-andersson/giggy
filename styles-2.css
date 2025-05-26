@@ -88,6 +88,10 @@ main {
   box-sizing: border-box;
 }
 
+/* =================
+    Card 
+   ================= */
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -98,7 +102,7 @@ main {
   /* Prevents cards from stretching too wide */
 }
 
-.card {
+.card-container .card {
   flex: 1 1 300px;
   /* Grow, shrink, and have a minimum width of 300px */
   box-sizing: border-box;
@@ -108,7 +112,7 @@ main {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card-header {
+.card-container .card-header {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -116,14 +120,14 @@ main {
   justify-content: space-between;
 }
 
-.card-header .material-symbols-outlined {
+.card-container .card-header .material-symbols-outlined {
   font-size: 1.5rem;
   color: #ffbeec;
   font-weight: 300;
   /* Thin */
 }
 
-.card-list {
+.card-container .card-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -132,46 +136,97 @@ main {
   gap: 6px;
 }
 
-.card-list li {
+.card-container .card-list li {
   padding-left: 1em;
   position: relative;
 }
 
-.card-list li::before {
+.card-container .card-list li::before {
   content: "•";
   position: absolute;
   left: 0;
   color: #ffbeec;
 }
 
-.grid-container {
-  height: 360px;
+/* =================
+    Image Grid - w Span 
+   =================
+
+.grid-container-span {
+  height: 320px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  border: 2px solid blue;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1em;
 }
 
 @media (min-width: 480px) {
-  .grid-container {
-    height: 800px;
+  .grid-container-span {
+    height: 640px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    border: 2px solid blue;
     gap: 1em;
   }
 }
 
-.img-card {
+.grid-container-span .card {
   grid-column: span 1;
+  grid-row: span 3;
   border: 1px solid black;
   background-color: gray;
 }
 
-.img-card-wide {
+.grid-container-span .card-wide {
   grid-column: span 2;
+  grid-row: span 5;
   border: 1px solid black;
   background-color: gray;
+}
+
+*/
+
+/* =================
+    Image Grid - w Grid Areas 
+   ================= */
+
+/* Cards */
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.daytime {
+  grid-area: da;
+}    
+
+.red-carpet{
+  grid-area: re;
+}
+
+.fancy {
+  grid-area: fa;
+}
+
+.grid-container-ga {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "fa"
+  "da"
+  "re";
+}   
+
+@media (min-width: 520px) {
+  .grid-container-ga {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "fa da"
+    "fa re";
+  }
 }
